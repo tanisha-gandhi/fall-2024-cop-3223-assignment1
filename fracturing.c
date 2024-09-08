@@ -9,6 +9,7 @@ double calculateWidth();
 double calculateHeight();
 //BONUS (Optional): double askForUserInput();
 
+//main to call all other functions and return 0
 int main(int argc, char **argv){
 
     // call functions
@@ -21,7 +22,7 @@ int main(int argc, char **argv){
     return 0;
 }
 
-//helper function
+//helper function to calculate distance between 2 user-input pts
 double distanceFormula(){
     //initiate variables
     double x1, y1, x2, y2;
@@ -43,7 +44,7 @@ double distanceFormula(){
     printf("Point #1 entered: x1 = %.3f; y1 = %.3f", x1, y1);
     printf("\nPoint #2 entered: x2 = %.3f; y2 = %.3f", x2, y2);
 
-    //calculate distance, print final statement, return distance
+    //calculate and return distance
     distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
     return distance;
 }
@@ -55,7 +56,7 @@ double calculateDistance(){
     return distance;
 }
 
-//returns a double indicating difficulty level
+//returns a double indicating difficulty level, prints perimeter of the user-input circle
 double calculatePerimeter(){
     double radius = distanceFormula() / 2;
     double perimeter = 2 * PI * radius;
@@ -63,7 +64,7 @@ double calculatePerimeter(){
     return 3.0;
 }
 
-//returns a double indicating difficulty level
+//returns a double indicating difficulty level, prints area of the user-input circle
 double calculateArea(){
     double radius = distanceFormula() / 2;
     double area  = pow(radius, 2) * PI;
@@ -71,14 +72,14 @@ double calculateArea(){
     return 2.0;
 }
 
-//returns a double indicating difficulty level
+//returns a double indicating difficulty level, prints width of the user-input circle
 double calculateWidth(){
     double width = distanceFormula();
     printf("\nThe width of the city encompassed by your request is %.3f\n", width);
     return 1.0;
 }
 
-//returns a double indicating difficulty level
+//returns a double indicating difficulty level, prints height of the user-input circle
 double calculateHeight(){
     double height = distanceFormula();
     printf("\nThe height of the city encompassed by your request is %.3f\n", height);
